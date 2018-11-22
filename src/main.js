@@ -4,6 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// vuetify
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '@mdi/font/css/materialdesignicons.css'
+import '@fortawesome/fontawesome-free/css/all.css'
+import 'vuetify/dist/vuetify.min.css'
+import Vuetify from 'vuetify'
+
+Vue.use(Vuetify)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
