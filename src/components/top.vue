@@ -4,12 +4,18 @@
 
     <div>
       <v-flex>
-      <video ref="video" id="video" width="256" height="256" autoplay></video>
+      <video ref="video" id="video" width="512" height="512" autoplay></video>
+      <v-btn color="info" @click="capture()">capture</v-btn>
+
+      <canvas ref="canvas" id="canvas" width="512" height="512"></canvas>
       </v-flex>
     </div>
 
   </div>
 </template>
+
+<script src="./face-min.js"></script>
+<script src="./tracking-min.js"></script>
 
 <script>
 export default {
@@ -20,7 +26,7 @@ export default {
       video: {},
       medias: {},
       canvas: {},
-      captures: []
+      tracker: {}
     }
   },
   mounted () {
@@ -35,6 +41,10 @@ export default {
     }
   },
   methods: {
+    capture () {
+      this.canvas = this.$refs.canvas
+      this.context = this.canvas.getContext('2d').drawImage(this.video, 0, 0, 512, 512)
+    }
   }
 }
 

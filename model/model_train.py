@@ -22,7 +22,7 @@ def build_model():
     x = mobile_net(x_in)
     x = Dense(256, activation='relu')(x)
     x = Dropout(0.25)(x)
-    x = Dense(10, activation='softmax')(x)
+    x = Dense(6, activation='softmax')(x)
     model = Model(x_in, x)
 
     model.summary()
