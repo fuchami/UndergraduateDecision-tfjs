@@ -5,6 +5,7 @@
   "author": "fuchami <famichiki.yuuki@gmail.com>",
   "private": true,
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
@@ -54,6 +55,7 @@
     "file-loader": "^1.1.4",
     "font-awesome": "^4.7.0",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
