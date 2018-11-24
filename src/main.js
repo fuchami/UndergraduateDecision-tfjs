@@ -11,7 +11,9 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import 'vuetify/dist/vuetify.min.css'
 import Vuetify from 'vuetify'
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  iconfont: 'fa' || 'mdi' || 'md' || 'fa4'
+})
 
 Vue.config.productionTip = false
 
